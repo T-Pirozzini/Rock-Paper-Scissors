@@ -1,55 +1,75 @@
-function userChoice() {
-    const userChoice = prompt("Choose your weapon: Rock, Paper, or Scissors?").toLowerCase();
-    return userChoice
-  }
+//Scorekeeping
+let computerScore = 0;
+let playerScore = 0;
 
-function compChoice() {
-    let compChoice = Math.random();
-    if (compChoice < 0.34) {
-      compChoice = "rock";
-    } else if (compChoice <= 0.67) {
-      compChoice = "paper";
-    } else {
-      compChoice = "scissors";
-    }
-    return compChoice;
-  }
 
-function playRound(userChoice, compChoice) {
-        //Rock Choice
-        if (userChoice == "rock" && compChoice == "scissors") {
-        return "You Win! rock beats scissors!";
-        } else if (userChoice == "rock" && compChoice == "paper") {
-        return "You Lose! paper Beats rock";
-        } else if (userChoice == "rock" && compChoice == "rock") {
-        return "It's a Draw";
-        }
-        //paper Choice
-        else if (userChoice == "paper" && compChoice == "rock" + ++userScore) {
-        return "You Win! paper beats rock";
-        } else if (userChoice == "paper" && compChoice == "scissors" + ++compScore) {
-        return "You Lose! scissors beats paper";
-        } else if (userChoice == "paper" && compChoice == "paper") {
-        return "It's a Draw";
-        }
-        //scissors Choice
-        else if (userChoice == "scissors" && compChoice == "paper") {
-        return "You win! scissors beat paper" + ++userScore;
-        } else if (userChoice == "scissors" && compChoice == "rock" + ++compScore) {
-        return "You Lose! rock beats scissors";
-        } else if (userChoice == "scissors" && compChoice == "scissors") {
-        return "It's a Draw";
-        } else {
-        return "Something Went Wrong :(";
-        }
-    }
+// AI randomly chooses Rock, Paper or Scissors
+let compOptions =  ['rock', 'paper', 'scissors']
 
-let userScore = 0;
-let compScore = 0;
-
-while (userScore <5 && compScore <5){
-    console.log(playRound(userChoice(), compChoice()));
+function computerPlay(){
+    let computerSelection = Math.floor(Math.random() * compOptions.length);
+    return (compOptions[computerSelection]);
 }
+
+
+// Play One Round of RPS: Declare the winner && Award 1 point to the winner 
+function playRound(playerSelection, computerSelection) {
+  // Draw  
+    if (playerSelection === computerSelection) {
+      console.log('It\'s a draw');
+  // Rock Selection
+    } else if (playerSelection == 'rock' && computerSelection == 'paper') {
+      computerScore++;
+      console.log('Paper beats rock! You Lose!');
+    } else if (playerSelection == 'rock' && computerSelection == 'scissors') {
+      playerScore++;
+      console.log('Rock beats scissors! You Win!');
+  // Paper Selection
+    } else if (playerSelection == 'paper' && computerSelection == 'scissors') {
+      computerScore++;
+      console.log('Scissors beats paper! You Lose!');
+    } else if (playerSelection == 'paper' && computerSelection == 'rock') {
+      playerScore++;
+      console.log('paper beats rock! You Win!');
+  // Scissors Selection  
+    } else if (playerSelection == 'scissors' && computerSelection == 'rock') {
+      computerScore++;
+      console.log('Rock beats scissors! You Lose!');
+    } else if (playerSelection == 'scissors' && computerSelection == 'paper') {
+      playerScore++;
+      console.log('Scissors beats paper! You Win!');
+    } else {
+      console.log('Please input a valid response.');
+    }
+}
+
+let computerSelection = computerPlay();
+
+//Take Player/Computer Input && Display Result
+function game() {
+  const playerSelection = prompt ('Choose: Rock, Paper or Scissors.').toLowerCase(); //Player responses Case Insensitive
+  computerSelection = computerPlay();
+  playRound(playerSelection, computerSelection);
+  console.log('PLAYER:' + playerScore,' COMPUTER:' + computerScore);
+}
+
+//Play Five Rounds without Using Loops - Declare a Winner/Loser
+game();
+game();
+game();
+game();
+game();
+if (playerScore > computerScore) {
+  console.log('CONGRATULATIONS! You won the game!');
+} else if (playerScore < computerScore) {
+  console.log('YOU LOST THE GAME! Better luck next time!');
+} else {
+  console.log('IT\'S A DRAW! Try again?');
+}
+
+
+
+
 
 
 
