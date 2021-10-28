@@ -2,16 +2,30 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <title>RPS GAME</title>
     <link rel="stylesheet" href="style.css"/>
-    <title></title>
     <script type ="text/javascript" src="js/scripts.js" defer></script> 
-    <style>
-    body {background-color: black; color: whitesmoke}
-    </style>
 </head>
-<body>
-    <h1 style = "font-family:Verdana, Geneva, Tahoma, sans-serif; text-align: center;">🪨📄✂️ Rock, Paper, Scissors! 🪨📄✂️</h1>
-       
-   
-</body>
+    <body>
+        <h1>Rock, Paper or Scissors?</h1>
+        
+        <!-- Buttons/Options/Audio -->
+        <div class = 'button-container'>
+            <div class='option1'>   
+                <audio id="rock" src="rock.wav" preload="auto"></audio>
+                <button onclick="document.getElementById('rock').play();">🪨</button>
+            </div> 
+            <div class='option2'>   
+                <audio id="paper" src="paper.wav" preload="auto"></audio>
+                <button onclick="document.getElementById('paper').play();">📄</button>
+            </div> 
+            <div class ='option3'>   
+                <audio id="scissors" src="scissors.mp3" preload="auto"></audio>
+                <button onclick="document.getElementById('scissors').play();">✂️</button>
+            </div> 
+        </div>
+
+        <div id="container"></div>
+
+    </body>
 </html>
