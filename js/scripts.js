@@ -54,11 +54,12 @@ function playRound(playerSelection) {
     
     if (computerPoints === 5){
       computerWins.textContent = "Uh Oh! You Lost to the Computer!"
-
+      document.querySelector('Button').disabled = true;     
     }
     if (playerPoints === 5) {
       playerWins.textContent = "Congratulations! You beat the Computer!"
-      window.addEventListener('click', refreshPage());
+      document.querySelector('Button').disabled = true;
+      
     }
 }
 
@@ -117,6 +118,9 @@ container.appendChild(computerWins);
 function refreshPage(){
   reload = location.reload();
 }
+
+//Disable Buttons & Create "Try Again Button"
+
 
 
 

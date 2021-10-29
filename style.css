@@ -40,13 +40,23 @@ button {
 
 }
 
-button:hover {
+button:hover, .try-again:hover {
     background-color: rgba(8, 124, 139, 0.3);
     transform: scale(1.2);
 }
 
-/* Dynamic Results */
+.try-again {
+    background-color: rgba(8, 124, 139, 0.7);
+    border: 5px solid whitesmoke;
+    border-radius: 3rem; 
+    font-size: 1.5rem;
+    width: 12rem;
+    margin: 15px;
 
+
+}
+
+/* Dynamic Results */
 .userScore, .compScore {
     font-size: 30px;
     
