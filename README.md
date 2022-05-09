@@ -3,7 +3,7 @@ A JavaScript Rite of Passage: Rock, paper, Scissors. Simple logic using vanilla 
 #### HTML/CSS + Flexbox + practice with Icon/Font imports
 
 ## :clapper: Live Demo
-[D&D Landing Page](https://t-pirozzini.github.io/Rock-Paper-Scissors/)
+[Rock/Paper/Scissors](https://t-pirozzini.github.io/Rock-Paper-Scissors/)
 
 ## :camera: Screenshots
 ![Home Page](https://github.com/T-Pirozzini/Rock-Paper-Scissors/blob/main/assets/Home.png?raw=true)
