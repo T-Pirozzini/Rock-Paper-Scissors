@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <link rel="shortcut icon" href="">
+        <link rel="shortcut icon" href="">        
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -10,30 +10,31 @@
         <!-- Styles  -->
         <link rel="stylesheet" href="./styles/style.css"/>
         <!-- Scripts -->
-        <script type ="text/javascript" src="scripts/index.js" defer></script> 
+        <script type ="text/javascript" src="scripts/index.js" defer></script>
+        <script defer src="/node_modules/@fortawesome/fontawesome-free/js/all.js"></script> 
         <title>RPS GAME</title>
     </head>
     <body>
-        <h1>ROCK, PAPER or SCISSORS?</h1>
+        <h1>ROCK, PAPER or SCISSORS?</h1>        
         
         <!-- Buttons/Options/Audio -->
         <div class = 'button-container'>
             <div class='option-rock'>   
                 <audio id="sound-rock" src="/assets/rock.wav" preload="auto"></audio>
-                <button id='btn' onclick="document.getElementById('sound-rock').play();">⛰️</button>
+                <button id='btn' onclick="document.getElementById('sound-rock').play();"><i class="fa-regular fa-hand-back-fist option"></i></button>
             </div> 
             <div class='option-paper'>   
                 <audio id="sound-paper" src="/assets/paper.wav" preload="auto"></audio>
-                <button id='btn' onclick="document.getElementById('sound-paper').play();">📄</button>
+                <button id='btn' onclick="document.getElementById('sound-paper').play();"><i class="fa-regular fa-hand option"></i></button>
             </div> 
             <div class ='option-scissors'>   
                 <audio id="sound-scissors" src="/assets/scissors.mp3" preload="auto"></audio>
-                <button id='btn' onclick="document.getElementById('sound-scissors').play();">✂️</button>
+                <button id='btn' onclick="document.getElementById('sound-scissors').play();"><i class="fa-brands fa-angellist option"></i></button>
             </div> 
         </div>       
         <div id="results-container"></div>
         <div class="reset">
             <input class='try-again' type="button" onclick='window.location.reload();' value='Reset Game'/>
-        </div>
+        </div>        
     </body>
 </html>

@@ -15,23 +15,25 @@ h1 {
 
 /* Buttons */
 .button-container {
-    display: flex;    
+    display: flex;   
     justify-content: center;
     align-items: center;
-    padding: 10px;
-    margin: 20px;    
 }
-button {      
+.button-container .option {     
+    margin: 20px; 
+    background-color: rgba(8, 124, 139);     
+}
+button  {      
     border: 5px solid whitesmoke;
     border-radius: 30px;
     transition: all .5s ease;    
     font-size: 15em;
     margin: 20px; 
-    background-color: rgba(8, 124, 139, 0.7);    
+    background-color: rgba(8, 124, 139); 
     cursor: pointer;  
 }
 button:hover, .try-again:hover {
-    background-color: rgba(8, 124, 139, 0.3);
+    background-color: rgba(8, 124, 139);
     transform: scale(1.2);
 }
 .reset {
@@ -50,6 +52,14 @@ button:hover, .try-again:hover {
 }
 
 /* Dynamic Results */
+#results-container {
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 5px;
+    transition: all .5s ease;   
+}
 .userScore, .compScore {
     font-size: 50px;   
     padding: 10px;
@@ -62,6 +72,7 @@ button:hover, .try-again:hover {
 .compSelection {
     font-style: italic;
     padding: 10px;
+    margin: 10px;
     color: red;
     font-size: 50px;         
 }
@@ -70,14 +81,3 @@ button:hover, .try-again:hover {
     font-size: 90px;
     padding: 25px;       
 }
-
-#results-container {
-    display: flex;    
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 5px;
-    transition: all .5s ease;   
-}
-
-
