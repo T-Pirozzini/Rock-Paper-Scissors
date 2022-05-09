@@ -3,18 +3,16 @@
     box-sizing: border-box;
     background-color: black;
     color: whitesmoke;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Shadows Into Light', cursive;
 }
-
 
 /* Typography */
 h1 {
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Shadows Into Light', cursive;
     text-align: center;
-    font-size: 80px;
+    font-size: 180px;
     padding: 25px;  
 }
-
 
 /* Buttons */
 .button-container {
@@ -24,8 +22,6 @@ h1 {
     align-items: center;
     flex-wrap: wrap;      
 }
-
-
 button {
     border: 5px solid whitesmoke;
     border-radius: 3rem;
@@ -37,14 +33,11 @@ button {
     background-color: rgba(8, 124, 139, 0.7);
     text-align: center;  
     cursor: pointer;  
-
 }
-
 button:hover, .try-again:hover {
     background-color: rgba(8, 124, 139, 0.3);
     transform: scale(1.2);
 }
-
 .try-again {
     background-color: rgba(8, 124, 139, 0.7);
     border: 5px solid whitesmoke;
@@ -52,8 +45,6 @@ button:hover, .try-again:hover {
     font-size: 1.5rem;
     width: 12rem;
     margin: 15px;
-
-
 }
 
 /* Dynamic Results */
@@ -64,14 +55,12 @@ button:hover, .try-again:hover {
     justify-content:flex-start;
     padding: 10px;
 }
-
 .result {
     font-style: italic;
     font-size: 50px;
     display: flex;
     justify-content: center;
 }
-
 .compSelection {
     font-style: italic;
     color: red;
@@ -79,12 +68,10 @@ button:hover, .try-again:hover {
     display: flex;
     justify-content: center;
 }
-
 .computerWins, .playerWins {
     font-style: italic;
     font-size: 60px;
     padding: 25px;
-
     display: flex;
     justify-content: center;
 }

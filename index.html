@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <title>RPS GAME</title>
-    <link rel="stylesheet" href="./styles/style.css"/>
-    <script type ="text/javascript" src="js/index.js" defer></script> 
-</head>
+    <head>
+        <meta charset="utf-8">
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+        <!-- Styles  -->
+        <link rel="stylesheet" href="./styles/style.css"/>
+        <!-- Scripts -->
+        <script type ="text/javascript" src="scripts/index.js" defer></script> 
+        <title>RPS GAME</title>
+    </head>
     <body>
         <h1>Rock, Paper or Scissors?</h1>
         
         <!-- Buttons/Options/Audio -->
         <div class = 'button-container'>
             <div class='option1'>   
-                <audio id="rock" src="rock.wav" preload="auto"></audio>
+                <audio id="rock" src="/assets/rock.wav" preload="auto"></audio>
                 <button onclick="document.getElementById('rock').play();">⛰️</button>
             </div> 
             <div class='option2'>   
-                <audio id="paper" src="paper.wav" preload="auto"></audio>
+                <audio id="paper" src="/assets/paper.wav" preload="auto"></audio>
                 <button onclick="document.getElementById('paper').play();">📄</button>
             </div> 
             <div class ='option3'>   
-                <audio id="scissors" src="scissors.mp3" preload="auto"></audio>
+                <audio id="scissors" src="/assets/scissors.mp3" preload="auto"></audio>
                 <button onclick="document.getElementById('scissors').play();">✂️</button>
             </div> 
         </div>       

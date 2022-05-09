@@ -2,12 +2,11 @@
 let computerPoints = 0;
 let playerPoints = 0;
 
-
 // AI randomly chooses Rock, Paper or Scissors
-let compOptions =  ['rock', 'paper', 'scissors']
+let compOptions =  ['rock', 'paper', 'scissors'];
 
 function computerPlay(){
-    let computerSelection = Math.floor(Math.random() * compOptions.length);
+    let computerSelection = Math.floor(Math.random() * compOptions.length);    
     return (compOptions[computerSelection]);       
 }
 
@@ -15,38 +14,31 @@ function computerPlay(){
 function playRound(playerSelection) {
   let computerSelection = computerPlay();
   // Draw  
-    if (playerSelection === computerSelection) {
-      console.log('It\'s a draw');
+    if (playerSelection === computerSelection) {      
       result.textContent = 'It\'s a draw';
   // Rock Selection
     } else if (playerSelection == 'rock' && computerSelection == 'paper') {
-      computerPoints++;
-      console.log('Paper beats rock! You Lose!');
+      computerPoints++;     
       result.textContent = 'Paper beats rock! You Lose!';
     } else if (playerSelection == 'rock' && computerSelection == 'scissors') {
-      playerPoints++;
-      console.log('Rock beats scissors! You Win!');
+      playerPoints++;      
       result.textContent = 'Rock beats scissors! You Win!';
   // Paper Selection
     } else if (playerSelection == 'paper' && computerSelection == 'scissors') {
-      computerPoints++;
-      console.log('Scissors beats paper! You Lose!');
+      computerPoints++;      
       result.textContent = 'Scissors beats paper! You Win!';
     } else if (playerSelection == 'paper' && computerSelection == 'rock') {
-      playerPoints++;
-      console.log('Paper beats rock! You Win!');
+      playerPoints++;      
       result.textContent = 'Paper beats rock! You Win!';
   // Scissors Selection  
     } else if (playerSelection == 'scissors' && computerSelection == 'rock') {
       computerPoints++;
-      console.log('Rock beats scissors! You Lose!');
       result.textContent = 'Rock beats scissors! You Lose!';
     } else if (playerSelection == 'scissors' && computerSelection == 'paper') {
-      playerPoints++;
-      console.log('Scissors beats paper! You Win!');
+      playerPoints++;      
       result.textContent = 'Scissors beats paper! You Win!';
-    } else {
-      console.log('Please input a valid response.');
+    } else {      
+      result.textContent = 'Please input a valid response.';
     }
     userScore.textContent = 'PLAYER SCORE:' + playerPoints;
     compScore.textContent = 'COMPUTER SCORE:' + computerPoints;
@@ -58,8 +50,7 @@ function playRound(playerSelection) {
     }
     if (playerPoints === 5) {
       playerWins.textContent = "Congratulations! You beat the Computer!"
-      document.querySelector('Button').disabled = true;
-      
+      document.querySelector('Button').disabled = true;      
     }
 }
 
