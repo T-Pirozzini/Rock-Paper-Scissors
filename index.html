@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-
+        <link rel="shortcut icon" href="">
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,25 +14,26 @@
         <title>RPS GAME</title>
     </head>
     <body>
-        <h1>Rock, Paper or Scissors?</h1>
+        <h1>ROCK, PAPER or SCISSORS?</h1>
         
         <!-- Buttons/Options/Audio -->
         <div class = 'button-container'>
-            <div class='option1'>   
-                <audio id="rock" src="/assets/rock.wav" preload="auto"></audio>
-                <button onclick="document.getElementById('rock').play();">⛰️</button>
+            <div class='option-rock'>   
+                <audio id="sound-rock" src="/assets/rock.wav" preload="auto"></audio>
+                <button id='btn' onclick="document.getElementById('sound-rock').play();">⛰️</button>
             </div> 
-            <div class='option2'>   
-                <audio id="paper" src="/assets/paper.wav" preload="auto"></audio>
-                <button onclick="document.getElementById('paper').play();">📄</button>
+            <div class='option-paper'>   
+                <audio id="sound-paper" src="/assets/paper.wav" preload="auto"></audio>
+                <button id='btn' onclick="document.getElementById('sound-paper').play();">📄</button>
             </div> 
-            <div class ='option3'>   
-                <audio id="scissors" src="/assets/scissors.mp3" preload="auto"></audio>
-                <button onclick="document.getElementById('scissors').play();">✂️</button>
+            <div class ='option-scissors'>   
+                <audio id="sound-scissors" src="/assets/scissors.mp3" preload="auto"></audio>
+                <button id='btn' onclick="document.getElementById('sound-scissors').play();">✂️</button>
             </div> 
         </div>       
-        <div id="container"></div>
-        <input class = 'try-again' type="button" onclick='window.location.reload();' value='Reset Game'/>
-
+        <div id="results-container"></div>
+        <div class="reset">
+            <input class='try-again' type="button" onclick='window.location.reload();' value='Reset Game'/>
+        </div>
     </body>
 </html>
